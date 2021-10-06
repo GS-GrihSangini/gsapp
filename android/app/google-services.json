@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "811613885674",
+    "project_id": "gsapp-b923a",
+    "storage_bucket": "gsapp-b923a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:811613885674:android:a35f4e854d932353b93393",
+        "android_client_info": {
+          "package_name": "com.gsapp.gsidapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "811613885674-78aamgcpvke9l2onlc5gsnls6qmk19mr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnibtZespYtcI6pdCMEDAfRcQWybY6Yqg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "811613885674-78aamgcpvke9l2onlc5gsnls6qmk19mr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
