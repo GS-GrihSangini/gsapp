@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gsidapp/models/user.dart';
 import 'package:gsidapp/services/auth.dart';
 
 class SignIn extends StatefulWidget {
@@ -43,14 +44,14 @@ class _SignInState extends State<SignIn> {
           Container(
             padding: EdgeInsets.all(100),
             child: RaisedButton(
-              child: Text("Login with mail"),
+              child: Text("Login with"),
               onPressed: () async {
                 dynamic result = await _auth.signInAnon();
                 if (result == null) {
                   print("Error Signing In");
                 } else {
                   print("Signed-In");
-                  print(result);
+                  print(result.uid);
                 }
               },
             ),

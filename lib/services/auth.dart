@@ -5,18 +5,28 @@ import 'package:gsidapp/models/user.dart';
 class AuthService {
   final FirebaseAuth _auth = FirebaseAuth.instance;
 
-  //create user object based on firebase user
-  // User? _userFromFirebase(User user) {
-  //   return user != null ? User(uid: user.uid) : null;
-  // }
+  // create user object based on firebase user
+  UserID? _userFromFirebase(User user) {
+    // ignore: unnecessary_null_comparison
+    return user != null ? UserID(uid: user.uid) : null;
+  }
 
-  //Sign-In Anonymously
+  //auth change user stream
+
+  Stream<UserID?> get user {
+    return _auth
+        .authStateChanges()
+        .map((User? user) => _userFromFirebase(user!));
+    // .map(_userFromFirebase);
+  }
+
+  // Sign-In Anonymously
 
   Future signInAnon() async {
     try {
       UserCredential result = await _auth.signInAnonymously();
       User? user = _auth.currentUser;
-      return user;
+      return _userFromFirebase(user!);
     } catch (e) {
       print(e.toString());
       return null;
